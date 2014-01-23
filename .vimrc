@@ -34,8 +34,8 @@ set smartcase
 set incsearch
 
 
-imap <C-h> <ESC>:w<cr>:!time ruby %<CR>
-nmap <C-h> :w<cr>:!time ruby %<CR>
+imap <C-r> <ESC>:w<cr>:!time ruby %<CR>
+nmap <C-r> :w<cr>:!time ruby %<CR>
 
 imap <c-i> <esc>
 " insertモードでhjkl移動を利用する
@@ -43,3 +43,12 @@ imap <c-h> <Left>
 imap <c-j> <Down>
 imap <c-k> <Up>
 imap <c-l> <Right>
+
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle "tpope/vim-fugitive"
+filetype plugin indent on
