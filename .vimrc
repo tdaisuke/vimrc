@@ -9,6 +9,7 @@ set autowriteall
 set fileformats=unix,dos,mac " 改行コードの自動認識
 set scrolloff=5 " スクロール時の余白確保
 
+
 syntax on
 filetype on
 filetype indent on
@@ -34,6 +35,9 @@ set smartcase
 " インクリメンタルサーチ
 set incsearch
 
+imap <C-t> <ESC>:QuickRun<CR>
+nmap <C-t> :QuickRun<CR>
+
 "rで保存してruby
 imap <C-r> <ESC>:w<cr>:!time ruby %<CR>
 nmap <C-r> :w<cr>:!time ruby %<CR>
@@ -41,8 +45,8 @@ nmap <C-r> :w<cr>:!time ruby %<CR>
 imap <C-w> <ESC>:w<CR>
 nmap <C-w> :w<CR>
 "qで終了
-imap <C-w> <ESC>:w<CR>:q<CR>
-nmap <C-w> :w<CR>:q<CR>
+imap <C-q> <ESC>:w<CR>:q<CR>
+nmap <C-q> :w<CR>:q<CR>
 
 "iでesc
 imap <c-i> <esc>
@@ -62,6 +66,7 @@ nmap <C-p> :Git push origin master<CR>
 imap <C-s> <ESC>:Gstatus<CR>
 nmap <C-s> :Gstatus<CR>
 
+
 "vundle
 set nocompatible
 filetype off
@@ -70,4 +75,6 @@ call vundle#rc()
 
 Bundle "tpope/vim-fugitive"
 Bundle "thinca/vim-quickrun"
+":BundleInstall
+
 filetype plugin indent on
