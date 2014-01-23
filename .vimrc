@@ -37,4 +37,9 @@ set incsearch
 imap <C-h> <ESC>:w<cr>:!time ruby %<CR>
 nmap <C-h> :w<cr>:!time ruby %<CR>
 
-imap <c-j> <esc>
+imap <c-i> <esc>
+" insertモードでhjkl移動を利用する
+imap <c-h> <Left>
+imap <c-j> <Down>
+imap <c-k> <Up>
+imap <c-l> <Right>
