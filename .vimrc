@@ -20,8 +20,6 @@ augroup auto_comment_off
   autocmd BufEnter * setlocal formatoptions-=ro
 augroup END
 
-"test
-
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
@@ -36,16 +34,30 @@ set smartcase
 " インクリメンタルサーチ
 set incsearch
 
-
+"rで保存してruby
 imap <C-r> <ESC>:w<cr>:!time ruby %<CR>
 nmap <C-r> :w<cr>:!time ruby %<CR>
+"wで保存
+imap <C-w> <ESC>:w<CR>
+nmap <C-w> :w<CR>
 
+"iでesc
 imap <c-i> <esc>
 " insertモードでhjkl移動を利用する
 imap <c-h> <Left>
 imap <c-j> <Down>
 imap <c-k> <Up>
 imap <c-l> <Right>
+
+"git関連
+imap <C-a> <ESC>:w<CR>:Gwrite<CR>
+nmap <C-a> :w<CR>:Gwrite<CR>
+imap <C-c> <ESC>:w<CR>:Gcommit -am "
+nmap <C-c> :w<CR>:Gcommit -am "
+imap <C-p> <ESC>:Git push origin master<CR>
+nmap <C-p> :Git push origin master<CR>
+imap <C-s> <ESC>:Gstatus<CR>
+nmap <C-s> :Gstatus<CR>
 
 "vundle
 set nocompatible
