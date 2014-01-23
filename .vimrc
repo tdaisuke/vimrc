@@ -1,4 +1,10 @@
 set number
+set ruler
+set cursorline
+set cursorcolumn
+set showmatch
+set list
+
 set autoindent
 set tabstop=2
 set shiftwidth=2
@@ -18,6 +24,7 @@ augroup auto_comment_off
   autocmd BufEnter * setlocal formatoptions-=ro
 augroup END
 
+"test
 
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
