@@ -69,4 +69,5 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle "tpope/vim-fugitive"
+Bundle "thinca/vim-quickrun"
 filetype plugin indent on
