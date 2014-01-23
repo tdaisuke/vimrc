@@ -1,8 +1,6 @@
 set number
 set ruler
 set cursorline
-set list
-
 set autoindent
 set tabstop=2
 set shiftwidth=2
