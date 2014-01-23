@@ -1,8 +1,6 @@
 set number
 set ruler
 set cursorline
-set cursorcolumn
-set showmatch
 set list
 
 set autoindent
