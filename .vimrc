@@ -40,6 +40,9 @@ nmap <C-r> :w<cr>:!time ruby %<CR>
 "wで保存
 imap <C-w> <ESC>:w<CR>
 nmap <C-w> :w<CR>
+"qで終了
+imap <C-w> <ESC>:w<CR>:q<CR>
+nmap <C-w> :w<CR>:q<CR>
 
 "iでesc
 imap <c-i> <esc>
