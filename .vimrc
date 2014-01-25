@@ -10,8 +10,7 @@ set fileformats=unix,dos,mac " 改行コードの自動認識
 set scrolloff=5 " スクロール時の余白確保
 
 
-syntax on
-filetype on
+"filetype on
 filetype indent on
 let g:netrw_liststyle = 3
 
@@ -66,15 +65,27 @@ nmap <C-p> :Git push origin master<CR>
 imap <C-s> <ESC>:Gstatus<CR>
 nmap <C-s> :Gstatus<CR>
 
-
 "vundle
-set nocompatible
+set nocompatible               " be iMproved
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
 
-Bundle "tpope/vim-fugitive"
-Bundle "thinca/vim-quickrun"
+NeoBundle "tpope/vim-fugitive"
+NeoBundle "thinca/vim-quickrun"
+
+"set nocompatible
+"filetype off
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+
+"Bundle "tpope/vim-fugitive"
+"Bundle "thinca/vim-quickrun"
 ":BundleInstall
 
-filetype plugin indent on
+"filetype plugin indent on
+filetype plugin indent on     " required!
+"filetype indent on
+syntax on
