@@ -83,16 +83,5 @@ NeoBundle "tpope/vim-endwise"
 ":NeoBundleInstall
 ":NeoBundleClean
 
-"set nocompatible
-"filetype off
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-
-"Bundle "tpope/vim-fugitive"
-"Bundle "thinca/vim-quickrun"
-":BundleInstall
-
-"filetype plugin indent on
 filetype plugin indent on     " required!
-"filetype indent on
 syntax on
